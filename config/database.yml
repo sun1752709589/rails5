@@ -1,13 +1,22 @@
-# MySQL. Versions 5.0 and up are supported.
-default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: root
-  password:
-  host: 172.28.128.3
+# # MySQL. Versions 5.0 and up are supported.
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: 5
+#   username: root
+#   password:
+#   host: 172.28.128.3
+#
+# development:
+#   <<: *default
+#   database: rails5
 
+# Postgresql 9.5
 development:
-  <<: *default
+  adapter: postgresql
+  encoding: utf8
   database: rails5
-
+  pool: 5
+  username: postgres
+  password: 'sun'
+  host: 172.28.128.3
