@@ -1,9 +1,0 @@
-development:
-  adapter: async
-
-test:
-  adapter: async
-
-production:
-  adapter: redis
-  url: redis://172.28.128.3:6379/1
