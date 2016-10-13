@@ -12,22 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20160701071727) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-  enable_extension "hstore"
-
-# Could not dump table "articles" because of following StandardError
-#   Unknown type 'article_status' for column 't_status'
-
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "passwd"
     t.string   "email"
     t.integer  "age"
     t.boolean  "gender"
-    t.float    "salary"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.float    "salary",     limit: 24
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
 end
