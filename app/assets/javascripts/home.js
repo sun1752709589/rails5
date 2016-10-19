@@ -1,11 +1,16 @@
-// 这是我们的 Model
-var exampleData = {
-  name: 'Vue.js'
-}
+var vm = new Vue({
+  el: '#demo',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar',
+    fullName: 'Foo Bar'
+  }
+})
 
-// 创建一个 Vue 实例或 "ViewModel"
-// 它连接 View 与 Model
-var exampleVM = new Vue({
-  el: '#example-1',
-  data: exampleData
+vm.$watch('firstName', function (val) {
+  this.fullName = val + ' ' + this.lastName
+})
+
+vm.$watch('lastName', function (val) {
+  this.fullName = this.firstName + ' ' + val
 })
