@@ -5,6 +5,14 @@ GIT
     health-monitor-rails (5.0.1)
       rails (>= 3.2)
 
+GIT
+  remote: git://github.com/sun1752709589/monit.git
+  revision: a3ffab6992bb2e2da9d46c4c5b0ca44697d8631d
+  specs:
+    monit (0.3.1)
+      activesupport
+      nokogiri
+
 GEM
   remote: https://gems.ruby-china.org/
   specs:
@@ -71,7 +79,6 @@ GEM
     colorize (0.8.1)
     concurrent-ruby (1.0.2)
     connection_pool (2.2.0)
-    curb (0.9.3)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -214,11 +221,11 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   colorize
-  curb (~> 0.9.3)
   health-monitor-rails!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  monit!
   mysql2 (>= 0.3.18, < 0.5)
   pg (~> 0.18)
   pry
