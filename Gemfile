@@ -54,7 +54,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-# gem 'curb', '~> 0.9.3'
+gem 'curb', '~> 0.9.3'
 gem 'health-monitor-rails', github: 'sun1752709589/health-monitor-rails'
 gem 'monit', github: 'sun1752709589/monit'
 gem 'airbrake', '~> 5.0'
+gem "bunny"
+gem 'redis-rails'
+gem 'sneakers'
