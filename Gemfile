@@ -61,3 +61,4 @@ gem 'airbrake', '~> 5.0'
 gem "bunny"
 gem 'redis-rails'
 gem 'sneakers'
+gem 'httparty'
